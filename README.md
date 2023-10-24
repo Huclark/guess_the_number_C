@@ -10,7 +10,7 @@
 - [License](#license)
 
 ## About
-This is a simple but fun game where the player is asked to guess a random number from 1 to 100. If the player guesses right, he wins. This game is also good for kids to test their ability to find a number based on greater than or less than feedback
+This is a simple but fun game where the player is asked to guess a random number from 1 to 100. This game is also good for kids to test their ability to find a number based on greater than or less than feedback
 There are only 5 attempts to get it right! This code is written in C.
 
 ## Prerequisites

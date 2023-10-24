@@ -3,12 +3,10 @@
 
 ## Table of Contents
 - [About](#about)
-- [Objective](#objective)
-- [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Limitations](#limitations)
-- [Contributing](#contributing)
+- [How to play](#Howtoplay)
+- [Contributions](#contributions)
 - [License](#license)
 
 ## About

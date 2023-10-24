@@ -26,10 +26,13 @@ void guess_loop(void)
 			puts_("Invalid input. Please enter a number\n");
 			sleep(1);
 			attempts_left(counter);
-			continue;
 		}
-		if (check_valid_input(line_buffer, counter, random_num) == 0)
+		else if (check_valid_input(line_buffer, counter, random_num) == 0)
+		{
+			free(line_buffer);
 			break;
+		}
+		free(line_buffer);
 		no_of_tries++;
 	}
 	if (no_of_tries == max_trials)
@@ -38,7 +41,6 @@ void guess_loop(void)
 		print_numbers(random_num);
 		puts_("\n");
 	}
-	free(line_buffer);
 }
 
 
@@ -116,7 +118,6 @@ int match_input(int counter, int random_num, char *line_buffer)
 		sleep(1);
 		attempts_left(counter);
 	}
-
 	return (1);
 }
 

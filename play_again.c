@@ -21,27 +21,28 @@ int play_again(void)
 		if (user_input == NULL)
 			puts_("Invalid input! Please enter \"Yes\" or \"No\".\n");
 
-		for (i = 0 ; user_input[i] ; i++)
-			user_input[i] = _tolower(user_input[i]);
-
-		if (stringcompare(user_input, "yes") == 0)
-		{
-			free(user_input);
-			return (1);
-		}
-
-		else if (stringcompare(user_input, "no") == 0)
-		{
-			free(user_input);
-			puts_("Thanks for playing :)\n");
-			return (0);
-		}
-
 		else
 		{
-			free(user_input);
-			puts_("Invalid input! Please enter \"Yes\" or \"No\".\n");
-			sleep(1);
+			for (i = 0 ; user_input[i] ; i++)
+				user_input[i] = _tolower(user_input[i]);
+
+			if (stringcompare(user_input, "yes") == 0)
+			{
+				free(user_input);
+				return (1);
+			}
+			else if (stringcompare(user_input, "no") == 0)
+			{
+				free(user_input);
+				puts_("Thanks for playing :)\n");
+				return (0);
+			}
+			else
+			{
+				free(user_input);
+				puts_("Invalid input! Please enter \"Yes\" or \"No\".\n");
+				sleep(1);
+			}
 		}
 	}
 }

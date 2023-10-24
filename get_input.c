@@ -23,7 +23,11 @@ char *get_input(void)
 			free(line_buffer);
 			exit(EXIT_SUCCESS);
 		}
-
+		if (position_size == 0 && ch == '\n')
+		{
+			free(line_buffer);
+			return (NULL);
+		}
 		else if (ch == '\n')
 		{
 			line_buffer[position_size] = '\0';
@@ -33,17 +37,13 @@ char *get_input(void)
 			line_buffer[position_size] = ch;
 		position_size += 1;
 	}
-	/* Realloc if we have exceeded size threshold */
 	if (position_size >= buflength)
 	{
 		buflength += READ_BUFFER;
 		line_buffer = _realloc(line_buffer, buflength,
 									sizeof(char) * buflength);
 		if (line_buffer == NULL)
-		{
-			perror("Failed to allocate memory");
 			exit(EXIT_FAILURE);
-		}
 	}
 }
 

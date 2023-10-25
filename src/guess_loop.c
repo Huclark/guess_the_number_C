@@ -37,7 +37,7 @@ void guess_loop(void)
 	}
 	if (no_of_tries == max_trials)
 	{
-		puts_("Game over! The secret number was 0");
+		puts_("Game over! The secret number was ");
 		print_numbers(random_num);
 		puts_("\n");
 	}

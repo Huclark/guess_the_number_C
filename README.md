@@ -20,7 +20,7 @@ The only prerequisite is to clone this repo and run the executable file, `game`
 1. Clone the repository:
 
    ```bash
-	https://github.com/Huclark/simple_shell.git
+	https://github.com/Huclark/guess_the_number_C.git
 
 2. Use `./game` to run.
 
